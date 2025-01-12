@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Proposal</title>
+  
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+</head>
+<style>
+*{
+  margin: 0px;
+  padding: 0px;
+}
+h1{
+  font-size: 8vw;
+  padding: 8px;
+  color: rgba(14, 208, 230, 1);
+  text-align: center;
+  
+}
+  .container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border: 2px solid #333;
+    
+    overflow: hidden;
+    background: linear-gradient(blueviolet,lightpink,yellowgreen,lightgreen)
+    
+  }
+  #target{
+    position: absolute;
+    left: 150px;
+    background-color: blue;
+    border: none;
+    width:20vw;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 8px;
+    cursor: pointer;
+    transition: top 0.5s left 0.5s;
+    margin-left:80px;
+    color: white;
+    
+  }
+  #yes{
+   position: absolute;
+  color: white;
+    background-color: red;
+    border: none;
+    width:20vw;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 8px;
+    cursor: pointer;
+    transition: top 0.5s left 0.5s;
+    /*margin-left: 0px;*/
+    
+  }
+  .secdiv{
+  position: relative;
+  margin-top: 40px;
+    width: 100vw;
+    height: 15vh;
+    text-align: center;
+    font-size: 6vw;
+    font-family: serif;
+    /*color: white;
+    background-color: green;*/
+    border-radius: 8px;
+    
+  }
+  .img{
+    text-align: center;
+    width: 100%;
+    
+  
+  }
+  video{
+    width: 230px;
+  
+    opacity: 0%;
+  }
+  
+  @media ( min-width: 600px){
+    #target{
+      
+      
+      
+      font-size: 9vw;
+    }
+    #yes{
+    
+      
+      
+      font-size: 9vw;
+    }
+    .secdiv {
+            margin-top: 200px;
+    }
+    video{
+      width: 80vw;
+    }
+    h1{
+      font-size: 12vw;
+    }
+  }
+  
+</style>
+<body>
+
+<div class="container">
+  <div class="box">
+    <h1>Do you Love me ?</h1>
+    <br><br>
+    <button id="target">No</button>
+    <button id="yes">Yes</button>
+  </div><br><br><br><br><br>
+  <br><br>
+  
+  <div class="secdiv">
+    
+    
+  </div>
+  <br>
+  
+  <div class="img">
+    <center>
+    <video src="01.mp4" loop></video>
+  
+  </center>
+  </div>
+  
+</div>
+<script>
+  const target= document.getElementById('target');
+  function moveTarget(){
+    const maxWidth = 250;
+    const maxHeight =200;
+    
+    const randomX = Math.floor(Math.random() * maxWidth);
+    const randomY = Math.floor(Math.random() * maxHeight);
+    
+    target.style.left = randomX + 'px';
+    target.style.top = randomY + 'px';
+  }
+  target.addEventListener('click' ,function(){
+    moveTarget();
+  });
+ // target.addEventListener('click',function(){
+   //alert(" go to the hell and  get lost  €.  ");
+ //});
+ 
+ 
+ 
+ 
+ 
+ 
+ const yesButton = document.getElementById('yes');
+  yes.addEventListener('click', function() {
+    
+    yesButton.innerHTML=' 😍Thank youu... 😍 <br>❤Love you to  my dear ❤ <br> 💫🥰❤😘💝😍💖💫 '
+    yesButton.style.width='100vw'
+    yesButton.style.backgroundColor='green'
+    yesButton.style.color='white'
+    yesButton.style.fontSize='8vw'
+    
+    const happy=document.querySelector('.secdiv');
+    happy.innerHTML=' Mai janta tha ki<br> tum mujhe mna nhi krogi <br>🤩🤩🤩😉🤩🤩🤩';
+    happy.style.color='white'
+    happy.style.backgroundColor='green'
+    //happy.innerHTML += '<img src="d.jpg">'
+    
+    const image=document.querySelector('video');
+    image.play();
+    image.style.opacity='100%'
+    
+    const no = document.getElementById('target');
+    no.style.opacity='0%'
+
+   // alert("Thanks , Love you too! my dear");
+  });
+  
+
+  
+  
+</script>
+
+
+
+<script>
+  let btn = document.getElementById("yes");
+  btn.addEventListener('click', function() {
+
+    const jsConfetti = new JSConfetti()
+
+    jsConfetti.addConfetti()
+    jsConfetti.addConfetti()
+    jsConfetti.addConfetti()
+  })
+</script>
+
+</body>
+
+</html>
